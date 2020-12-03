@@ -23,11 +23,11 @@ public class Queue {
         lst = lst.addLast(o);
     }
 
-    public boolean isEmpty() {
+    public boolean isEmpty(){
         return lst.size() <= 0;
     }
 
-    public int size() {
+    public int size(){
         return lst.size();
     }
 
