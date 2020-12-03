@@ -16,10 +16,10 @@ public class PrefixMatches {
     }
 
     public int load(String... strings) {
-        for (String str: strings){
+        for (String str : strings) {
             String[] words = str.split("\\s+");
-            for (String word : words){
-                if (word.length() >= 3){
+            for (String word : words) {
+                if (word.length() >= 3) {
                     trie.add(new Tuple(word, word.length()));
                 }
             }
@@ -37,21 +37,23 @@ public class PrefixMatches {
 
     public Iterable<String> wordsWithPrefix(String pref) {
         if (pref.length() < 2) {
-            return Collections::emptyIterator;}
+            return Collections::emptyIterator;
+        }
         return trie.wordsWithPrefix(pref);
     }
 
     public Iterable<String> wordsWithPrefix(String pref, int k) {
         if (pref.length() < 2 || k < 1) {
-            return Collections::emptyIterator;}
+            return Collections::emptyIterator;
+        }
         int len = k;
         if (k == 2) len = 3;
         Iterable<String> allWords = trie.wordsWithPrefix(pref);
         ArrayList<String> res = new ArrayList<>();
         HashSet<Integer> checker = new HashSet<>();
-        for (String word : allWords){
+        for (String word : allWords) {
             if (word.length() >= len &&
-                    (checker.contains(word.length()) || checker.size() < k)){
+                    (checker.contains(word.length()) || checker.size() < k)) {
                 checker.add(word.length());
                 res.add(word);
             }
