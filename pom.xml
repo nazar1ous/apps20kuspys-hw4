@@ -41,11 +41,11 @@
 	
     <reporting>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jxr-plugin</artifactId>
-                <version>LATEST</version>
-            </plugin>
+<!--&lt;!&ndash;            <plugin>&ndash;&gt;-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--&lt;!&ndash;                <artifactId>maven-jxr-plugin</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <version>LATEST</version>&ndash;&gt;-->
+<!--            </plugin>-->
         </plugins>
     </reporting>
    
@@ -110,7 +110,7 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>3.5</version>
                 <configuration>
-                    <linkXref>true</linkXref>
+<!--                    <linkXref>true</linkXref>-->
                     <sourceEncoding>UTF8</sourceEncoding>
                     <minimumTokens>30</minimumTokens>
                     <targetJdk>1.8</targetJdk>                    
